@@ -11,11 +11,20 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    // nested route
+    children: [
+      {
+        path: "contacts/:contactId",
+        element: <Contact></Contact>,
+      },
+    ],
   },
-  {
-    path: "contacts/:contactId",
-    element: <Contact></Contact>,
-  },
+
+  // {
+  //   path: "contacts/:contactId",
+  //   element: <Contact></Contact>,
+  // },
+  // error element component
   {
     path: "*",
     element: <ErrorPage></ErrorPage>,

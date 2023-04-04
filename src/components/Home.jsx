@@ -1,4 +1,5 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -32,7 +33,10 @@ const Home = () => {
           </ul>
         </nav>
       </div>
-      <div id="detail"></div>
+      <div id="detail">
+        {/* nested route outlet */}
+        <Outlet></Outlet>
+      </div>
     </div>
   );
 };
